@@ -1,0 +1,10 @@
+@page
+@model ThanksModel
+@{
+    ViewData["Title"] = "Thanks";
+}
+<div class="text-center">
+    <h2>Thank you, @ThanksModel.name!</h2>
+    <p>It's great you are coming. The goodies are ready.</p>
+    <p>Click <a asp-page="/Guests">here</a> to see who else is coming</p>
+</div>

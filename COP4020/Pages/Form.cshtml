@@ -1,0 +1,40 @@
+@page
+@model FormModel
+@{
+    ViewData["Title"] = "Register";
+}
+<span class="badge bg-primary RSVPbanner">RSVP</span>
+<div @(FormModel.hidden ? "hidden " :string.Empty)id="error" style="color:red">
+	<ul>
+		<li>
+			Please enter your name 
+		</li>
+		<li>
+			Please enter your age 
+		</li>
+		<li>
+			Please enter your arrival time 
+		</li>
+		<li>
+			Please select whether you require parking assistance
+		</li>
+	</ul>
+</div>
+<form  method = "post">  
+	<label asp-for="NewGuest.Name" class="form-label">Your Name</label><br/>
+	<input type="text" asp-for="NewGuest.Name" class="form-control formElement"><br/>  
+
+	<label asp-for="NewGuest.Age" name="age" class="form-label">Your Age</label><br/>  
+	<input type="text"asp-for="NewGuest.Age" class="form-control formElement"><br/>  
+	<label asp-for="NewGuest.Arrival" class="form-label">Arrival Time</label>  <br/>
+	<input type="time" asp-for="NewGuest.Arrival" class="form-control formElement"><br/>  
+
+	<label asp-for="NewGuest.RequiresParking" class="form-label">Request Parking?</label> <br/> 
+	<select asp-for="NewGuest.RequiresParking" class="form-select formElement">  
+		<option value="none" selected disabled hidden>Select</option>
+		<option value="true">Yes</option>  
+		<option value = "false">No</option>  
+	</select><br/>
+
+	<button class="btn btn-primary">Submit RSVP</button>
+</form>

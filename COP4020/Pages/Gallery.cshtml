@@ -1,0 +1,47 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Gallery";
+	string imagePath = Url.Content("images/stelly.jpg");
+}
+
+<div class="container">
+	<div class="row">
+		<div class = "col-3">
+			<div class="card" style="width: 18rem;">
+				<img src="~/images/stelly.jpg" alt="Stelly" height="113" width="150"class="card-img-top" /> 
+				<div class="card-body">
+					<h5 class="card-title">Stelly</h5>
+					<p class="card-text">This is Stelly. If you're holding food, she'll make you drop it.</p>
+				</div>
+			</div>
+		</div>
+		<div class = "col-3">
+			<div class="card" style="width: 18rem;">
+				<img src="~/images/rusty.jpg" alt="Rusty" height="113" width="150" class="card-img-top"/> 
+				<div class="card-body">
+					<h5 class="card-title">Rusty</h5>
+					<p class="card-text">This is Rusty. She's adventurous and might try to scare you.</p>
+				</div>
+			</div>
+		</div>
+		<div class = "col-3">
+			<div class="card" style="width: 18rem;">
+				<img src="~/images/snowy.jpg" alt="Snowy"height="113" width="150"  class="card-img-top"/> 
+				<div class="card-body">
+					<h5 class="card-title">Snowy</h5>
+					<p class="card-text">THis is Snowy. She likes to keep clean and doesn't like people ruffling her feathers.</p>
+				</div>
+			</div>
+		</div>
+		<div class = "col-3">
+			<div class="card" style="width: 18rem;">
+				<img src="~/images/mocha.png" alt="tammy" height="113" width="150" class="card-img-top"/> 
+				<div class="card-body">
+					<h5 class="card-title">Mocha</h5>
+					<p class="card-text">This is Mocha. She thinks she's the greatest ever and will demand attention.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+@page
+@using Guests.Models
+@model COP4020.Pages.GuestsModel
+@{
+    ViewData["Title"] = "Guest List";
+}
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Expected Arrival</th>
+            <th scope="col">Need Parking</th>
+        </tr>
+    </thead>
+    @foreach (var guest in Model.guests)
+    {
+        <tr>
+            <td>@guest.Name</td>
+            <td>@guest.Age</td>
+            <td>@Model.Arrival(guest)</td>
+            <td>@Model.requiresParking(guest)</td>
+        </tr>
+    }
+</table>
+
+@section Scripts {
+<partial name="_ValidationScriptsPartial" />
+}
